@@ -1,0 +1,188 @@
+@import "normalize.scss";
+
+// === mixin ===
+
+@mixin font-main {
+  font-family: "Montserrat", sans-serif;
+}
+
+@mixin font-logo {
+  font-family: "Zhi Mang Xing", cursive;
+}
+
+// === / mixin ===
+
+// === variables ===
+$color-white: white;
+$color-gray: #a6a6a6;
+$color-black: black;
+// === / variables ===
+
+// === common ===
+* {
+  box-sizing: border-box;
+}
+body {
+  @include font-main;
+  cursor: default;
+}
+
+.section-inside {
+  margin: 0 auto;
+  max-width: 1180px;
+}
+// === / common ===
+
+// === greeting ===
+
+.greeting {
+  color: $color-white;
+  background: url("./assets/crop.png") no-repeat 50% 50%;
+  background-size: cover;
+
+  .section-inside {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &-header {
+    display: flex;
+
+    padding-top: 40px;
+    justify-content: space-between;
+
+    &__logo {
+      @include font-logo;
+
+      color: $color-white;
+      font-size: 36px;
+      text-align: center;
+    }
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    &__links {
+      display: flex;
+      margin-right: 100px;
+      li {
+        list-style: none;
+        & + li {
+          margin-left: 40px;
+        }
+      }
+
+      a {
+        color: $color-gray;
+        text-decoration: none;
+        transition: 0.2s;
+
+        &:hover {
+          color: $color-white;
+        }
+      }
+    }
+    &__icon {
+      cursor: pointer;
+    }
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+
+    &__num {
+      font-size: 30px;
+      margin-bottom: 50px;
+      font-weight: bold;
+    }
+
+    &__title {
+      font-size: 50px;
+      margin-bottom: 60px;
+    }
+    &__subtitle {
+      font-size: 18px;
+      width: 60%;
+      font-weight: 300;
+      margin-bottom: 60px;
+
+    }
+  }
+  &-links {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &__instagram {
+      align-items: center;
+      display: flex;
+      padding: 30px 0;
+      cursor: pointer;
+      
+      a {
+        font-size: 14px;
+        font-weight: 300;
+        margin-left: 20px;
+        text-decoration: none;
+        color: $color-white;
+        transition: 0.2s;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .navigation {
+        display: flex;
+        position: absolute;
+        bottom: -70px;
+        right: 0;
+      
+      &__item {
+        background-color: $color-black;
+        flex-direction: column;
+        padding: 40px;
+        display: flex;
+        flex-basis: 33%;
+        transition: 1s;
+
+        &-num {
+          font-size: 16px;
+          margin-bottom: 20px;
+          font-weight: bold;
+        }
+        &-title {
+          font-size: 20px;
+          margin-bottom: 20px;
+          font-weight: bold;
+        }
+        &-description {
+          font-size: 12px;
+          line-height: 20px;
+        }
+        &:hover {
+          background-color: $color-white;
+          color: $color-black;
+        }
+      }
+    }
+  }
+}
+// === / greeting ===
+
+// === command ===
+// === / command ===
+
+// === portfolio ===
+// === / portfolio ===
+
+// === services ===
+// === / services ===
+
+// === footer ===
+// === / footer ===
